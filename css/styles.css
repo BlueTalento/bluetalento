@@ -555,3 +555,16 @@ html {
         align-items: flex-start;
     }
 }
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6900;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+.logo-text:hover {
+    color: #e55a00;
+}
