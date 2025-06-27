@@ -479,6 +479,8 @@ body {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
+    animation-play-state: paused;
+    /* para que no se reproduzca hasta que JS lo active */
 }
 
 @keyframes fadeInUp {
@@ -534,7 +536,10 @@ html {
 
     .nav,
     .header-actions {
-        display: none;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
         flex-direction: column;
         width: 100%;
         gap: 12px;
@@ -543,7 +548,9 @@ html {
 
     .nav.show,
     .header-actions.show {
-        display: flex;
+        max-height: 500px;
+        /* suficiente para mostrar */
+        opacity: 1;
     }
 
     .logo-mobile {
