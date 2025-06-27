@@ -17,7 +17,11 @@
             <div class="header-content">
                 <div class="logo-mobile">
                     <span class="logo-text">BlueTalento</span>
-                    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+                        <span class="bar top"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar bottom"></span>
+                    </button>                      
                 </div>
                 <nav class="nav" id="nav">
                     <a href="#" class="nav-link">Inicio</a>
@@ -228,16 +232,16 @@
     </footer>
 
     <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.getElementById('nav');
-        const actions = document.getElementById('header-actions');
+        const toggleBtn = document.getElementById('menu-toggle');
+        const nav = document.querySelector('.nav');
+        const actions = document.querySelector('.header-actions');
 
-        menuToggle.addEventListener('click', () => {
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('active');
             nav.classList.toggle('show');
             actions.classList.toggle('show');
         });
-    </script>
-    
+    </script>     
     
     <script>
         // Detectar cuando un elemento entra en pantalla y agregar clase para animación
@@ -262,7 +266,7 @@
                 appearOnScroll.observe(fader);
             });
         });
-    </script>      
+    </script>   
 
 </body>
 
