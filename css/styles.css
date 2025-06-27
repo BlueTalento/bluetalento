@@ -526,10 +526,39 @@ html {
 }
 
 .menu-toggle {
-    font-size: 28px;
-    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
     border: none;
+    background: none;
     cursor: pointer;
+    z-index: 110;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle .bar {
+    width: 28px;
+    height: 3px;
+    background-color: #040404;
+    border-radius: 2px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animación a X */
+.menu-toggle.active .top {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active .middle {
+    opacity: 0;
+}
+
+.menu-toggle.active .bottom {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
