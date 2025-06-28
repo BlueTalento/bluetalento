@@ -605,12 +605,26 @@ html {
     color: #0077cc;
 }
 
-/* Por defecto (desktop): mostramos solo el logo normal y ocultamos el móvil */
+/* Mostrar solo logo normal en desktop */
+.logo {
+    display: block;
+}
+
 .logo-mobile {
     display: none;
 }
 
-/* Para pantallas pequeñas (móvil) ocultamos el logo normal y mostramos el móvil */
+/* Estilos del logo (tamaño adaptable) */
+.logo img,
+.logo-mobile img {
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    padding: 4px 0;
+}
+
+/* En pantallas pequeñas mostramos logo móvil */
 @media screen and (max-width: 768px) {
     .logo {
         display: none;
@@ -618,8 +632,12 @@ html {
 
     .logo-mobile {
         display: flex;
-        /* o block, según tu diseño */
         align-items: center;
         justify-content: space-between;
+    }
+
+    .logo img,
+    .logo-mobile img {
+        max-height: 80px;
     }
 }
