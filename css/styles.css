@@ -273,7 +273,19 @@ body {
 
 .trust-logos img:hover {
     opacity: 1;
+    transform: scale(1.1) rotate(-1deg);
 }
+
+@media screen and (max-width: 768px) {
+    .trust-logos {
+        gap: 30px;
+    }
+
+    .trust-logos img {
+        height: 32px;
+    }
+}
+
 
 /* Contact Section */
 .contact {
@@ -380,7 +392,6 @@ body {
     color: #9ca3af;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         padding: 0 16px;
@@ -585,30 +596,9 @@ html {
     }
 }
 
-.logo-text {
-    font-size: 28px;
-    font-weight: 700;
-    color: #083ed1;
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    letter-spacing: 2px;
-}
-
-.logo-text:hover {
-    color: #083ed1;
-}
-
-.logo {
-    display: block;
-}
-
-.logo-mobile {
-    display: none;
-}
-
 .logo img,
 .logo-mobile img {
-    max-height: 80px;
+    max-height: 40px;
     width: auto;
     height: auto;
     object-fit: contain;
