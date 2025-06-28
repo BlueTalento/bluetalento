@@ -641,3 +641,19 @@ html {
         max-height: 80px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        /* antes estaba en 16px o más */
+        padding: 8px 0;
+        /* reduce el padding vertical */
+    }
+
+    .nav,
+    .header-actions {
+        margin-top: 0;
+    }
+}
