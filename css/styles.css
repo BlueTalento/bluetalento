@@ -60,7 +60,7 @@ body {
 }
 
 .nav-link:hover {
-    color: #0077cc;
+    color: #083ed1;
 }
 
 .header-actions {
@@ -71,7 +71,7 @@ body {
 
 /* Button Styles */
 .btn-primary {
-    background: #0077cc;
+    background: #083ed1;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -83,7 +83,7 @@ body {
 }
 
 .btn-primary:hover {
-    background: #0077cc;
+    background: #083ed1;
 }
 
 .btn-secondary {
@@ -148,7 +148,7 @@ body {
 .workspace-option:hover,
 .workspace-option.active {
     background: white;
-    border-color: #0077cc;
+    border-color: #083ed1;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -235,7 +235,7 @@ body {
 }
 
 .solution-link {
-    color: #0077cc;
+    color: #083ed1;
     text-decoration: none;
     font-weight: 600;
     font-size: 16px;
@@ -243,7 +243,7 @@ body {
 }
 
 .solution-link:hover {
-    color: #0077cc;
+    color: #083ed1;
 }
 
 /* Trust Section */
@@ -326,7 +326,7 @@ body {
 .contact-form input:focus,
 .contact-form select:focus {
     outline: none;
-    border-color: #0077cc;
+    border-color: #083ed1;
 }
 
 .contact-form button {
@@ -474,13 +474,11 @@ body {
     }
 }
 
-/* Animaciones suaves */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s ease forwards;
     animation-play-state: paused;
-    /* para que no se reproduzca hasta que JS lo active */
 }
 
 @keyframes fadeInUp {
@@ -490,12 +488,10 @@ body {
     }
 }
 
-/* Scroll suave */
 html {
     scroll-behavior: smooth;
 }
 
-/* Efecto al pasar el mouse sobre logos */
 .trust-logos img {
     height: 40px;
     opacity: 0.7;
@@ -507,7 +503,6 @@ html {
     transform: scale(1.1);
 }
 
-/* Mejora visual a inputs del formulario */
 .contact-form input,
 .contact-form select {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -548,7 +543,6 @@ html {
     transition: all 0.3s ease;
 }
 
-/* Animación a X */
 .menu-toggle.active .top {
     transform: translateY(7px) rotate(45deg);
 }
@@ -578,7 +572,6 @@ html {
     .nav.show,
     .header-actions.show {
         max-height: 500px;
-        /* suficiente para mostrar */
         opacity: 1;
     }
 
@@ -595,17 +588,16 @@ html {
 .logo-text {
     font-size: 28px;
     font-weight: 700;
-    color: #0077cc;
+    color: #083ed1;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 2px;
 }
 
 .logo-text:hover {
-    color: #0077cc;
+    color: #083ed1;
 }
 
-/* Mostrar solo logo normal en desktop */
 .logo {
     display: block;
 }
@@ -614,7 +606,6 @@ html {
     display: none;
 }
 
-/* Estilos del logo (tamaño adaptable) */
 .logo img,
 .logo-mobile img {
     max-height: 80px;
@@ -624,7 +615,6 @@ html {
     padding: 4px 0;
 }
 
-/* En pantallas pequeñas mostramos logo móvil */
 @media screen and (max-width: 768px) {
     .logo {
         display: none;
@@ -646,10 +636,8 @@ html {
     .header-content {
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
-        /* antes estaba en 16px o más */
-        padding: 8px 0;
-        /* reduce el padding vertical */
+        gap: 2px;
+        padding: 2px 0;
     }
 
     .nav,
