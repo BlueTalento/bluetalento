@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlueTalent | Estudiantes</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f9ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            animation: fadeIn 1s ease;
+        }
+
+        .card img.logo {
+            width: 160px;
+            margin-bottom: 20px;
+        }
+
+        .card h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .btn-google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            padding: 14px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 20px;
+        }
+
+        .btn-google img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-google:hover {
+            background: #f0f0f0;
+        }
+
+        .input-email {
+            width: 100%;
+            max-width: 400px;
+            padding: 14px;
+            margin: 0 auto 16px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .btn-primary {
+            background-color: #1a73e8;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .btn-primary:hover {
+            background-color: #0f5fc6;
+        }
+
+        .link-empresa {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .link-empresa:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            margin: 16px 0;
+            color: #888;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Modal amigable */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            max-width: 350px;
+            animation: pop 0.3s ease;
+            position: relative;
+        }
+
+        .modal-icon {
+            width: 70px;
+            margin-bottom: 15px;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #1a73e8;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+
+        .btn-close {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: background 0.3s;
+        }
+
+        .btn-close:hover {
+            background-color: #0f5fc6;
+        }
+
+        @keyframes pop {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <img src="assets/Logo.jpg" alt="Logo BlueTalent" class="logo" />
+        <h1>Tu próximo trabajo está aquí</h1>
+        <p>Ingresa y postúlate a miles de empleos</p>
+
+        <button class="btn-google">
+            <img src="assets/google.png" alt="Google" />
+            Continúa con Google
+        </button>
+
+        <div class="divider">o</div>
+
+        <label for="emailInput"
+            style="font-weight: 600; color: #333; text-align: left; display: block; max-width: 400px; margin: 0 auto 6px;">
+            Continúa con tu correo
+        </label>
+        <input id="emailInput" type="email" class="input-email" placeholder="Ingresa tu correo electrónico" required />
+
+        <button class="btn-primary" type="submit">Continuar</button>
+
+        <p style="margin-top: 20px;">
+            ¿Necesitas contratar? <a href="empresas.html" class="link-empresa">Ingresa como empresa</a>.
+        </p>
+        </div>
+
+    <!-- Modal amigable -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <img src="assets/progreso.png" alt="Trabajo en progreso" class="modal-icon" />
+            <h2>¡Muy pronto!</h2>
+            <p>Esta función estará disponible próximamente.</p>
+            <button id="closeModal" class="btn-close">Entendido</button>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const closeModal = document.getElementById('closeModal');
+        const googleBtn = document.querySelector('.btn-google');
+        const continuarBtn = document.querySelector('.btn-primary');
+
+        function showModal(e) {
+            e.preventDefault();
+            modal.style.display = 'flex';
+        }
+
+        googleBtn.addEventListener('click', showModal);
+        continuarBtn.addEventListener('click', showModal);
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', e => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
