@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros | BlueTalent</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background-color: #0077cc;
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem 2rem;
+            position: relative;
+        }
+
+        header img {
+            width: 80px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        section h2 {
+            color: #0077cc;
+            margin-bottom: 1rem;
+        }
+
+        section p,
+        section ul {
+            line-height: 1.7;
+        }
+
+        section ul {
+            list-style: square;
+            padding-left: 1.5rem;
+        }
+
+        .volver {
+            display: inline-block;
+            text-decoration: none;
+            color: #0077cc;
+            border: 2px solid #0077cc;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .volver:hover {
+            background-color: #0077cc;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            background-color: #f1f1f1;
+            color: #666;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            header img {
+                width: 60px;
+                top: 15px;
+                left: 15px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/logo.png" alt="Logo de BlueTalent" />
+        <h1>Sobre Nosotros</h1>
+        <p>Conoce más sobre BlueTalent, nuestra misión y visión</p>
+    </header>
+
+    <main>
+        <section id="quienes-somos">
+            <h2>¿Quiénes Somos?</h2>
+            <p>
+                BlueTalent es una plataforma que busca conectar a estudiantes universitarios con empresas reales,
+                ofreciendo oportunidades laborales que impulsan el crecimiento personal y profesional.
+                Creemos en el talento joven y en el poder de la tecnología como puente entre la academia y el mundo
+                laboral.
+            </p>
+        </section>
+
+        <section id="mision">
+            <h2>Misión</h2>
+            <p>
+                Impulsar el desarrollo profesional de jóvenes estudiantes mediante una plataforma digital que conecta
+                talento emergente con oportunidades laborales reales, promoviendo la innovación y el crecimiento
+                conjunto
+                entre jóvenes y empresas.
+            </p>
+        </section>
+
+        <section id="vision">
+            <h2>Visión</h2>
+            <p>
+                Convertirnos en la plataforma líder de inserción laboral juvenil en América Latina, siendo reconocidos
+                por
+                nuestro compromiso con el talento joven, la transformación digital y la generación de impacto positivo
+                en
+                el tejido empresarial y social.
+            </p>
+        </section>
+
+        <a class="volver" href="index.html">← Volver al inicio</a>
+    </main>
+
+    <footer>
+        © 2025 BlueTalent. Todos los derechos reservados.
+    </footer>
+
+    <!-- ScrollReveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('section', {
+            distance: '50px',
+            duration: 1000,
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            interval: 200
+        });
+
+        ScrollReveal().reveal('header', {
+            origin: 'top',
+            distance: '30px',
+            duration: 1200,
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.volver', {
+            origin: 'left',
+            distance: '50px',
+            delay: 800,
+            duration: 800
+        });
+    </script>
+
+</body>
+
+</html>
