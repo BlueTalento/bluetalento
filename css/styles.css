@@ -289,63 +289,54 @@ body {
 
 
 /* Contact Section */
-.contact {
-    padding: 100px 0;
-    background: white;
+#ayuda-empresas {
+    background-color: #f9fbfc;
+    padding: 2.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    max-width: 900px;
+    margin: 2rem auto;
+    text-align: center;
+    color: #333;
 }
 
-.contact-content {
+#ayuda-empresas .contact-content h2 {
+    color: #040404;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
     max-width: 800px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ayuda-empresas .contact-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #333;
     text-align: center;
 }
 
-.contact h2 {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #040404;
-}
-
-.contact p {
-    font-size: 18px;
-    color: #615345;
-    margin-bottom: 50px;
-    line-height: 1.6;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form select {
-    padding: 16px;
-    border: 2px solid #e5e7eb;
+#ayuda-empresas .btn-primary {
+    display: inline-block;
+    background-color: #083ed1;
+    color: #fff;
+    padding: 14px 32px;
+    font-size: 1.1rem;
     border-radius: 8px;
-    font-size: 16px;
-    background: white;
-    transition: border-color 0.2s ease;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.contact-form input:focus,
-.contact-form select:focus {
-    outline: none;
-    border-color: #083ed1;
-}
-
-.contact-form button {
-    justify-self: center;
-    margin-top: 20px;
-    max-width: 200px;
+#ayuda-empresas .btn-primary:hover {
+    background-color: #0053a8;
 }
 
 /* Footer */
