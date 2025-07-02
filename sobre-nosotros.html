@@ -17,16 +17,18 @@
         header {
             background-color: #0077cc;
             color: white;
-            text-align: center;
             padding: 3rem 1rem 2rem;
+            text-align: center;
             position: relative;
         }
 
         header img {
-            width: 80px;
+            width: 70px;
             position: absolute;
             top: 20px;
             left: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         header h1 {
@@ -63,22 +65,12 @@
             margin-bottom: 1rem;
         }
 
-        section p,
-        section ul {
-            line-height: 1.7;
-        }
-
-        section ul {
-            list-style: square;
-            padding-left: 1.5rem;
-        }
-
         .volver {
             display: inline-block;
             text-decoration: none;
             color: #0077cc;
             border: 2px solid #0077cc;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 0.5rem;
             font-weight: bold;
             transition: all 0.3s ease;
@@ -97,38 +89,15 @@
             background-color: #f1f1f1;
             color: #666;
         }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            header img {
-                width: 60px;
-                top: 15px;
-                left: 15px;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            main {
-                padding: 1rem;
-            }
-
-            section {
-                padding: 1.5rem;
-            }
-        }
     </style>
 </head>
 
 <body>
 
     <header>
-        <img src="img/logo.png" alt="Logo de BlueTalent" />
+        <a href="index.html">
+            <img src="assets/Logo.jpg" alt="Logo BlueTalent" />
+        </a>
         <h1>Sobre Nosotros</h1>
         <p>Conoce más sobre BlueTalent, nuestra misión y visión</p>
     </header>
@@ -158,10 +127,9 @@
             <h2>Visión</h2>
             <p>
                 Convertirnos en la plataforma líder de inserción laboral juvenil en América Latina, siendo reconocidos
-                por
-                nuestro compromiso con el talento joven, la transformación digital y la generación de impacto positivo
-                en
-                el tejido empresarial y social.
+                por nuestro compromiso con el talento joven, la transformación digital y la generación de impacto
+                positivo
+                en el tejido empresarial y social.
             </p>
         </section>
 
@@ -172,7 +140,6 @@
         © 2025 BlueTalent. Todos los derechos reservados.
     </footer>
 
-    <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
         ScrollReveal().reveal('section', {
@@ -182,22 +149,7 @@
             origin: 'bottom',
             interval: 200
         });
-
-        ScrollReveal().reveal('header', {
-            origin: 'top',
-            distance: '30px',
-            duration: 1200,
-            delay: 200
-        });
-
-        ScrollReveal().reveal('.volver', {
-            origin: 'left',
-            distance: '50px',
-            delay: 800,
-            duration: 800
-        });
     </script>
-
 </body>
 
 </html>
