@@ -124,58 +124,18 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact fade-in" id="ayuda-empresas">
-        <div class="container">
-            <div class="contact-content">
-                <h2>¿Eres empresa? Te ayudamos a encontrar el talento ideal</h2>
-                <p>Completa el siguiente formulario y uno de nuestros asesores se pondrá en contacto contigo para
-                    ayudarte a publicar tus vacantes.</p>
-                <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
-                    <div class="form-row">
-                        <input type="text" name="nombre" placeholder="Nombre completo" required />
-                        <input type="email" name="email" placeholder="Correo electrónico" required />
-                    </div>
-                    <div class="form-row">
-                        <input type="text" name="empresa" placeholder="Nombre de la empresa" required />
-                        <input type="tel" name="telefono" placeholder="Número de teléfono" required />
-                    </div>
-                    <div class="form-row">
-                        <select name="ubicacion" required>
-                            <option value="">Ubicación de la empresa</option>
-                            <option value="amazonas">Amazonas</option>
-                            <option value="anzoategui">Anzoátegui</option>
-                            <option value="apure">Apure</option>
-                            <option value="barinas">Barinas</option>
-                            <option value="bolivar">Bolívar</option>
-                            <option value="carabobo">Carabobo</option>
-                            <option value="dcc">Distrito Capital</option>
-                            <option value="cojedes">Cojedes</option>
-                            <option value="delta">Delta Amacuro</option>
-                            <option value="falcon">Falcón</option>
-                            <option value="guarico">Guárico</option>
-                            <option value="lara">Lara</option>
-                            <option value="merida">Mérida</option>
-                            <option value="miranda">Miranda</option>
-                            <option value="monagas">Monagas</option>
-                            <option value="nuevaesparta">Nueva Esparta</option>
-                            <option value="portuguesa">Portuguesa</option>
-                            <option value="sucre">Sucre</option>
-                            <option value="tachira">Táchira</option>
-                            <option value="trujillo">Trujillo</option>
-                            <option value="vargas">La Guaira</option>
-                            <option value="yaracuy">Yaracuy</option>
-                            <option value="zulia">Zulia</option>
-                        </select>
-                        <input type="number" name="talentos" placeholder="¿Cuántos talentos necesitas?" min="1"
-                            required />
-                    </div>
-                    <button type="submit" class="btn-primary">Enviar</button>
-                </form>
-            </div>
+<!-- Sección Contacto para Empresas -->
+<section class="contact fade-in" id="ayuda-empresas">
+    <div class="container">
+        <div class="contact-content">
+            <h2>¿Eres empresa? Te ayudamos a encontrar el talento ideal</h2>
+            <p>Completa el siguiente formulario y uno de nuestros asesores se pondrá en contacto contigo para ayudarte a
+                publicar tus vacantes.</p>
+            <a href="contacto.html" class="btn-primary">Ir al formulario de contacto</a>
         </div>
-    </section>
-
+    </div>
+</section>
+  
     <!-- Footer -->
     <footer class="footer fade-in">
         <div class="container">
@@ -209,27 +169,29 @@
 
     <!-- Scripts -->
     <script>
-        const form = document.querySelector('.contact-form');
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            const action = form.getAttribute('action');
-            try {
-                const response = await fetch(action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
+            const form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(form);
+                    const action = form.getAttribute('action');
+                    try {
+                        const response = await fetch(action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (response.ok) {
+                            alert('Gracias por contactarnos, te responderemos pronto.');
+                            form.reset();
+                        } else {
+                            alert('Hubo un problema con el envío, intenta de nuevo.');
+                        }
+                    } catch (error) {
+                        alert('Error enviando el formulario.');
+                    }
                 });
-                if (response.ok) {
-                    alert('Gracias por contactarnos, te responderemos pronto.');
-                    form.reset();
-                } else {
-                    alert('Hubo un problema con el envío, intenta de nuevo.');
-                }
-            } catch (error) {
-                alert('Error enviando el formulario.');
-            }
-        });
+               }
 
         const toggleBtn = document.getElementById('menu-toggle');
         const nav = document.querySelector('.nav');
