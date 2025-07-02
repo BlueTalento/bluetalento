@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contacto | BlueTalent</title>
+    <meta name="description"
+        content="Contáctanos para encontrar el talento ideal o para estudiantes que quieran unirse a BlueTalent." />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        main {
+            max-width: 600px;
+            margin: 3rem auto 5rem;
+            background: #fff;
+            padding: 2.5rem 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        main h2 {
+            color: #0077cc;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        main p {
+            color: #444;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            background: #eee;
+            color: #555;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .tab.active {
+            background: #0077cc;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0, 119, 204, 0.4);
+        }
+
+        form .form-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.3rem;
+            flex-wrap: wrap;
+        }
+
+        form .form-row input,
+        form .form-row select {
+            flex: 1 1 45%;
+            min-width: 150px;
+            padding: 0.65rem 1rem;
+            font-size: 1rem;
+            border: 1.8px solid #ccc;
+            border-radius: 8px;
+            transition: border-color 0.25s ease;
+        }
+
+        form .form-row input.full-width,
+        form .form-row select.full-width {
+            flex-basis: 100%;
+        }
+
+        form .form-row input:focus,
+        form .form-row select:focus {
+            border-color: #0077cc;
+            outline: none;
+        }
+
+        form button.btn-primary {
+            width: 100%;
+            padding: 14px 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #0077cc;
+            border: none;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        form button.btn-primary:hover {
+            background: #005fa3;
+        }
+
+        /* Hide inactive forms */
+        .form-section {
+            display: none;
+        }
+
+        .form-section.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header fade-in">
+        <div class="container">
+            <div class="header-content">
+
+                <!-- Logo escritorio -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/Logo.jpg" alt="Logo BlueTalent" class="logo-img" />
+                    </a>
+                </div>
+
+                <!-- Logo móvil + botón hamburguesa -->
+                <div class="logo-mobile">
+                    <a href="index.html">
+                        <img src="assets/Logo.jpg" alt="Logo BlueTalent" class="logo-img" />
+                    </a>
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Menú">
+                        <span class="bar top"></span>
+                        <span class="bar middle"></span>
+                        <span class="bar bottom"></span>
+                    </button>
+                </div>
+
+                <!-- Navegación -->
+                <nav class="nav" id="nav">
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="sobre-nosotros.html#quienes-somos" class="nav-link">Sobre Nosotros</a>
+                    <a href="#" class="nav-link">Estudiantes</a>
+                    <a href="#" class="nav-link">Empresas</a>
+                    <a href="contacto.html" class="nav-link nav-link-active">Contacto</a>
+                </nav>
+
+                <!-- Botones -->
+                <div class="header-actions" id="header-actions">
+                    <button class="btn-secondary">Iniciar sesión</button>
+                    <a href="Estudiantes.html" class="btn-primary">Regístrate</a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <div class="tab active" data-target="empresa-form">Empresas</div>
+            <div class="tab" data-target="estudiante-form">Estudiantes</div>
+        </div>
+
+        <!-- Formulario Empresas -->
+        <section id="empresa-form" class="form-section active">
+            <h2>¿Eres empresa? Te ayudamos a encontrar el talento ideal</h2>
+            <p>Completa el formulario y uno de nuestros asesores te contactará para ayudarte a publicar tus vacantes.
+            </p>
+            <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
+                <div class="form-row">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required />
+                    <input type="email" name="email" placeholder="Correo electrónico" required />
+                </div>
+                <div class="form-row">
+                    <input type="text" name="empresa" placeholder="Nombre de la empresa" required />
+                    <input type="tel" name="telefono" placeholder="Número de teléfono" required />
+                </div>
+                <div class="form-row">
+                    <input type="text" name="rif" placeholder="RIF de la empresa" required />
+                    <select name="tipo_empresa" required>
+                        <option value="" disabled selected>Tipo de empresa</option>
+                        <option value="J">J</option>
+                        <option value="G">G</option>
+                        <option value="R">R</option>
+                        <option value="C">C</option>
+                    </select>  </div>
+                <div class="form-row">
+                    <select name="ubicacion" required>
+                        <option value="" disabled selected>Ubicación de la empresa</option>
+                        <option value="amazonas">Amazonas</option>
+                        <option value="anzoategui">Anzoátegui</option>
+                        <option value="apure">Apure</option>
+                        <option value="barinas">Barinas</option>
+                        <option value="bolivar">Bolívar</option>
+                        <option value="carabobo">Carabobo</option>
+                        <option value="dcc">Distrito Capital</option>
+                        <option value="cojedes">Cojedes</option>
+                        <option value="delta">Delta Amacuro</option>
+                        <option value="falcon">Falcón</option>
+                        <option value="guarico">Guárico</option>
+                        <option value="lara">Lara</option>
+                        <option value="merida">Mérida</option>
+                        <option value="miranda">Miranda</option>
+                        <option value="monagas">Monagas</option>
+                        <option value="nuevaesparta">Nueva Esparta</option>
+                        <option value="portuguesa">Portuguesa</option>
+                        <option value="sucre">Sucre</option>
+                        <option value="tachira">Táchira</option>
+                        <option value="trujillo">Trujillo</option>
+                        <option value="vargas">La Guaira</option>
+                        <option value="yaracuy">Yaracuy</option>
+                        <option value="zulia">Zulia</option>
+                    </select>
+                    <input type="number" name="talentos" placeholder="¿Cuántos talentos necesitas?" min="1" required />
+                </div>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </section>
+
+<!-- Formulario Estudiantes -->
+<section id="estudiante-form" class="form-section">
+    <h2>¿Eres estudiante? Regístrate para encontrar oportunidades</h2>
+    <p>Completa el formulario y únete a nuestra comunidad de talento joven.</p>
+    <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
+        <div class="form-row">
+            <input type="text" name="nombre_estudiante" placeholder="Nombre completo" required />
+            <input type="email" name="email_estudiante" placeholder="Correo electrónico" required />
+        </div>
+        <div class="form-row">
+            <input type="tel" name="telefono_estudiante" placeholder="Número de teléfono" required />
+            <input type="text" name="universidad" placeholder="Universidad / Centro de estudios" required />
+        </div>
+        <div class="form-row">
+            <input type="text" name="cedula" placeholder="Cédula de identidad" required />
+            <select name="tipo_cedula" required>
+                <option value="" disabled selected>Tipo de cédula</option>
+                <option value="V">V</option>
+                <option value="E">E</option>
+                <option value="R">R</option>
+            </select>
+        </div>
+        <div class="form-row">
+            <select name="carrera" required>
+                <option value="" disabled selected>Carrera / Área de estudio</option>
+                <!-- Opciones de carrera -->
+            </select>
+            <input type="number" name="anio_cursado" placeholder="Año que cursas" min="1" max="10" required />
+        </div>
+        <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+</section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-section">
+                    <h4>BlueTalent</h4>
+                    <ul>
+                        <li><a href="sobre-nosotros.html#quienes-somos">Quiénes somos</a></li>
+                        <li><a href="sobre-nosotros.html#vision">Misión y visión</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="index.html#empresas-aliadas">Empresas aliadas</a></li>
+                        <li><a href="index.html#ayuda-empresas">Ayuda para empresas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlueSystem. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cambiar tabs
+        const tabs = document.querySelectorAll('.tab');
+        const forms = document.querySelectorAll('.form-section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                forms.forEach(f => f.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.target).classList.add('active');
+            });
+        });
+
+        // Manejar envío de formularios (mismo script para ambos)
+        const contactForms = document.querySelectorAll('.contact-form');
+
+        contactForms.forEach(form => {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const formData = new FormData(form);
+                const action = form.getAttribute('action');
+
+                try {
+                    const response = await fetch(action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        alert('Gracias por contactarnos, te responderemos pronto.');
+                        form.reset();
+                    } else {
+                        alert('Hubo un problema con el envío, intenta de nuevo.');
+                    }
+                } catch (error) {
+                    alert('Error enviando el formulario.');
+                }
+            });
+        });
+
+        // Menú hamburguesa toggle
+        const toggleBtn = document.getElementById('menu-toggle');
+        const nav = document.querySelector('.nav');
+        const actions = document.querySelector('.header-actions');
+
+        toggleBtn.addEventListener('click', () => {
+            toggleBtn.classList.toggle('active');
+            nav.classList.toggle('show');
+            actions.classList.toggle('show');
+        });
+
+        // Animaciones fade-in al hacer scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const faders = document.querySelectorAll('.fade-in');
+
+            const appearOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.style.animationPlayState = 'running';
+                    appearOnScroll.unobserve(entry.target);
+                });
+            }, appearOptions);
+
+            faders.forEach(fader => {
+                fader.style.animationPlayState = 'paused';
+                appearOnScroll.observe(fader);
+            });
+        });
+    </script>
+</body>
+
+</html>
