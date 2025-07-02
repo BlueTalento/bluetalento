@@ -163,94 +163,109 @@
             <div class="tab" data-target="estudiante-form">Estudiantes</div>
         </div>
 
-        <!-- Formulario Empresas -->
-        <section id="empresa-form" class="form-section active">
-            <h2>¿Eres empresa? Te ayudamos a encontrar el talento ideal</h2>
-            <p>Completa el formulario y uno de nuestros asesores te contactará para ayudarte a publicar tus vacantes.
-            </p>
-            <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
-                <div class="form-row">
-                    <input type="text" name="nombre" placeholder="Nombre completo" required />
-                    <input type="email" name="email" placeholder="Correo electrónico" required />
-                </div>
-                <div class="form-row">
-                    <input type="text" name="empresa" placeholder="Nombre de la empresa" required />
-                    <input type="tel" name="telefono" placeholder="Número de teléfono" required />
-                </div>
-                <div class="form-row">
-                    <input type="text" name="rif" placeholder="RIF de la empresa" required />
-                    <select name="tipo_empresa" required>
-                        <option value="" disabled selected>Tipo de empresa</option>
-                        <option value="J">J</option>
-                        <option value="G">G</option>
-                        <option value="R">R</option>
-                        <option value="C">C</option>
-                    </select>  </div>
-                <div class="form-row">
-                    <select name="ubicacion" required>
-                        <option value="" disabled selected>Ubicación de la empresa</option>
-                        <option value="amazonas">Amazonas</option>
-                        <option value="anzoategui">Anzoátegui</option>
-                        <option value="apure">Apure</option>
-                        <option value="barinas">Barinas</option>
-                        <option value="bolivar">Bolívar</option>
-                        <option value="carabobo">Carabobo</option>
-                        <option value="dcc">Distrito Capital</option>
-                        <option value="cojedes">Cojedes</option>
-                        <option value="delta">Delta Amacuro</option>
-                        <option value="falcon">Falcón</option>
-                        <option value="guarico">Guárico</option>
-                        <option value="lara">Lara</option>
-                        <option value="merida">Mérida</option>
-                        <option value="miranda">Miranda</option>
-                        <option value="monagas">Monagas</option>
-                        <option value="nuevaesparta">Nueva Esparta</option>
-                        <option value="portuguesa">Portuguesa</option>
-                        <option value="sucre">Sucre</option>
-                        <option value="tachira">Táchira</option>
-                        <option value="trujillo">Trujillo</option>
-                        <option value="vargas">La Guaira</option>
-                        <option value="yaracuy">Yaracuy</option>
-                        <option value="zulia">Zulia</option>
-                    </select>
-                    <input type="number" name="talentos" placeholder="¿Cuántos talentos necesitas?" min="1" required />
-                </div>
-                <button type="submit" class="btn-primary">Enviar</button>
-            </form>
-        </section>
+<!-- Formulario Empresas -->
+<section id="empresa-form" class="form-section active">
+    <h2>¿Eres empresa? Te ayudamos a encontrar el talento ideal</h2>
+    <p>Completa el formulario y uno de nuestros asesores te contactará para ayudarte a publicar tus vacantes.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/mrbkjnav" method="POST">
+        <div class="form-row">
+            <input type="text" name="nombre_contacto" placeholder="Nombre completo" required />
+            <input type="email" name="email_contacto" placeholder="Correo electrónico" required />
+        </div>
+
+        <div class="form-row">
+            <input type="text" name="nombre_empresa" placeholder="Nombre de la empresa" required />
+            <input type="tel" name="telefono_contacto" placeholder="Número de teléfono" required />
+        </div>
+
+        <div class="form-row">
+            <select name="tipo_rif" required>
+                <option value="" disabled selected>Tipo de RIF</option>
+                <option value="J">J</option>
+                <option value="G">G</option>
+                <option value="R">R</option>
+                <option value="C">C</option>
+            </select>
+            <input type="text" name="numero_rif" placeholder="Número de RIF" required />
+        </div>
+
+        <div class="form-row">
+            <select name="ubicacion" required>
+                <option value="" disabled selected>Ubicación de la empresa</option>
+                <option value="amazonas">Amazonas</option>
+                <option value="anzoategui">Anzoátegui</option>
+                <option value="apure">Apure</option>
+                <option value="barinas">Barinas</option>
+                <option value="bolivar">Bolívar</option>
+                <option value="carabobo">Carabobo</option>
+                <option value="dcc">Distrito Capital</option>
+                <option value="cojedes">Cojedes</option>
+                <option value="delta">Delta Amacuro</option>
+                <option value="falcon">Falcón</option>
+                <option value="guarico">Guárico</option>
+                <option value="lara">Lara</option>
+                <option value="merida">Mérida</option>
+                <option value="miranda">Miranda</option>
+                <option value="monagas">Monagas</option>
+                <option value="nuevaesparta">Nueva Esparta</option>
+                <option value="portuguesa">Portuguesa</option>
+                <option value="sucre">Sucre</option>
+                <option value="tachira">Táchira</option>
+                <option value="trujillo">Trujillo</option>
+                <option value="vargas">La Guaira</option>
+                <option value="yaracuy">Yaracuy</option>
+                <option value="zulia">Zulia</option>
+            </select>
+
+            <input type="number" name="cantidad_talentos" placeholder="¿Cuántos talentos necesitas?" min="1" required />
+        </div>
+
+        <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+</section>
+
 
 <!-- Formulario Estudiantes -->
 <section id="estudiante-form" class="form-section">
     <h2>¿Eres estudiante? Regístrate para encontrar oportunidades</h2>
     <p>Completa el formulario y únete a nuestra comunidad de talento joven.</p>
-    <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
+    <form class="contact-form" action="https://formspree.io/f/xanjvrdn" method="POST">
         <div class="form-row">
-            <input type="text" name="nombre_estudiante" placeholder="Nombre completo" required />
-            <input type="email" name="email_estudiante" placeholder="Correo electrónico" required />
+            <input type="text" name="nombre" placeholder="Nombre completo" required />
+            <input type="email" name="email" placeholder="Correo electrónico" required />
         </div>
         <div class="form-row">
-            <input type="tel" name="telefono_estudiante" placeholder="Número de teléfono" required />
+            <input type="tel" name="telefono" placeholder="Número de teléfono" required />
             <input type="text" name="universidad" placeholder="Universidad / Centro de estudios" required />
         </div>
         <div class="form-row">
-            <input type="text" name="cedula" placeholder="Cédula de identidad" required />
             <select name="tipo_cedula" required>
                 <option value="" disabled selected>Tipo de cédula</option>
                 <option value="V">V</option>
                 <option value="E">E</option>
                 <option value="R">R</option>
             </select>
+            <input type="text" name="cedula" placeholder="Número de cédula" required />
         </div>
         <div class="form-row">
             <select name="carrera" required>
                 <option value="" disabled selected>Carrera / Área de estudio</option>
-                <!-- Opciones de carrera -->
+                <option value="Ingeniería de Sistemas">Ingeniería de Sistemas</option>
+                <option value="Administración">Administración</option>
+                <option value="Contabilidad">Contabilidad</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Derecho">Derecho</option>
+                <option value="Educación">Educación</option>
+                <option value="Psicología">Psicología</option>
+                <option value="Otras">Otras</option>
             </select>
             <input type="number" name="anio_cursado" placeholder="Año que cursas" min="1" max="10" required />
         </div>
         <button type="submit" class="btn-primary">Enviar</button>
     </form>
 </section>
+
 
     </main>
 
