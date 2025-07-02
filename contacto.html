@@ -240,13 +240,14 @@
             <input type="text" name="universidad" placeholder="Universidad / Centro de estudios" required />
         </div>
         <div class="form-row">
-            <select name="tipo_cedula" required>
-                <option value="" disabled selected>Tipo de cédula</option>
+            <select name="tipo_documento" required>
+                <option value="" disabled selected>Tipo de documento</option>
                 <option value="V">V</option>
                 <option value="E">E</option>
                 <option value="R">R</option>
+                <option value="P">P</option>
             </select>
-            <input type="text" name="cedula" placeholder="Número de cédula" required />
+            <input type="text" name="cedula" placeholder="Número de documento" required />
         </div>
         <div class="form-row">
             <select name="carrera" required>
@@ -260,7 +261,7 @@
                 <option value="Psicología">Psicología</option>
                 <option value="Otras">Otras</option>
             </select>
-            <input type="number" name="anio_cursado" placeholder="Año que cursas" min="1" max="10" required />
+            <input type="number" name="semestres_cursados" placeholder="Semestre actual" min="1" max="10" required />
         </div>
         <button type="submit" class="btn-primary">Enviar</button>
     </form>
