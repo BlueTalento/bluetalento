@@ -8,6 +8,11 @@
     <meta name="description"
         content="Conecta tu talento con las empresas que buscan profesionales del futuro. Regístrate, crea tu perfil y descubre oportunidades únicas." />
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,15 +20,11 @@
     <header class="header fade-in">
         <div class="container">
             <div class="header-content">
-    
-                <!-- Logo escritorio -->
                 <div class="logo">
                     <a href="index.html">
                         <img src="assets/Logo.jpg" alt="Logo BlueTalent" class="logo-img" />
                     </a>
                 </div>
-    
-                <!-- Logo móvil + botón hamburguesa -->
                 <div class="logo-mobile">
                     <a href="index.html">
                         <img src="assets/Logo.jpg" alt="Logo BlueTalent" class="logo-img" />
@@ -34,26 +35,18 @@
                         <span class="bar bottom"></span>
                     </button>
                 </div>
-    
-                <!-- Navegación -->
                 <nav class="nav" id="nav">
-                    <a href="#" class="nav-link">Inicio</a>
                     <a href="sobre-nosotros.html#quienes-somos" class="nav-link">Sobre Nosotros</a>
                     <a href="#" class="nav-link">Estudiantes</a>
                     <a href="#" class="nav-link">Empresas</a>
                 </nav>
-    
-                <!-- Botones -->
                 <div class="header-actions" id="header-actions">
                     <button class="btn-secondary">Iniciar sesión</button>
                     <a href="Estudiantes.html" class="btn-primary">Regístrate</a>
                 </div>
-    
             </div>
         </div>
     </header>
-    
-    
 
     <!-- Hero -->
     <section class="hero fade-in">
@@ -61,10 +54,10 @@
             <div class="hero-content">
                 <h1 class="hero-title fade-in">Conectamos estudiantes con empresas que buscan talento joven y
                     profesional.</h1>
-                <p class="hero-subtitle fade-in">En BlueTalento creemos en tu potencial. Crea tu perfil, aplica a
-                    ofertas y haz despegar tu carrera profesional.</p>
+                <p class="hero-subtitle fade-in">En BlueTalent creemos en tu potencial. Crea tu perfil, aplica a ofertas
+                    y haz despegar tu carrera profesional.</p>
                 <div class="workspace-options">
-                    <div class="workspace-option active fade-in">
+                    <div class="workspace-option fade-in">
                         <h3>Sube tu CV</h3>
                         <p>Crea un perfil profesional en minutos y deja que las empresas te encuentren.</p>
                     </div>
@@ -95,7 +88,6 @@
                     <div class="solution-content">
                         <h3>Perfil profesional</h3>
                         <p>Crea un perfil atractivo con tus habilidades, estudios y logros.</p>
-                        <a href="#" class="solution-link">Más información</a>
                     </div>
                 </div>
                 <div class="solution-card fade-in">
@@ -103,7 +95,6 @@
                     <div class="solution-content">
                         <h3>Ofertas de empleo</h3>
                         <p>Explora oportunidades que se ajusten a tu carrera y postúlate en pocos clics.</p>
-                        <a href="#" class="solution-link">Ver ofertas</a>
                     </div>
                 </div>
                 <div class="solution-card fade-in">
@@ -111,7 +102,6 @@
                     <div class="solution-content">
                         <h3>Soluciones para empresas</h3>
                         <p>Publica ofertas, revisa perfiles y encuentra el candidato ideal desde tu panel.</p>
-                        <a href="#" class="solution-link">Ir al panel empresarial</a>
                     </div>
                 </div>
             </div>
@@ -119,7 +109,7 @@
     </section>
 
     <!-- Trust -->
-    <section class="trust fade-in">
+    <section class="trust fade-in" id="empresas-aliadas">
         <div class="container">
             <h2 class="section-title">Tu futuro comienza aquí. Empresas que buscan jóvenes como tú</h2>
             <div class="trust-logos">
@@ -135,73 +125,101 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact fade-in">
+    <section class="contact fade-in" id="ayuda-empresas">
         <div class="container">
             <div class="contact-content">
                 <h2>¿Eres empresa? Te ayudamos a encontrar el talento ideal</h2>
                 <p>Completa el siguiente formulario y uno de nuestros asesores se pondrá en contacto contigo para
                     ayudarte a publicar tus vacantes.</p>
-                    <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
-                        <div class="form-row">
-                            <input type="text" name="nombre" placeholder="Nombre completo" required />
-                            <input type="email" name="email" placeholder="Correo electrónico" required />
-                        </div>
-                        <div class="form-row">
-                            <input type="text" name="empresa" placeholder="Nombre de la empresa" required />
-                            <input type="tel" name="telefono" placeholder="Número de teléfono" required />
-                        </div>
-                        <div class="form-row">
-                            <select name="ubicacion" required>
-                                <option value="">Ubicación de la empresa</option>
-                                <option value="amazonas">Amazonas</option>
-                                <option value="anzoategui">Anzoátegui</option>
-                                <option value="apure">Apure</option>
-                                <option value="barinas">Barinas</option>
-                                <option value="bolivar">Bolívar</option>
-                                <option value="carabobo">Carabobo</option>
-                                <option value="dcc">Distrito Capital</option>
-                                <option value="cojedes">Cojedes</option>
-                                <option value="delta">Delta Amacuro</option>
-                                <option value="falcon">Falcón</option>
-                                <option value="guarico">Guárico</option>
-                                <option value="lara">Lara</option>
-                                <option value="merida">Mérida</option>
-                                <option value="miranda">Miranda</option>
-                                <option value="monagas">Monagas</option>
-                                <option value="nuevaesparta">Nueva Esparta</option>
-                                <option value="portuguesa">Portuguesa</option>
-                                <option value="sucre">Sucre</option>
-                                <option value="tachira">Táchira</option>
-                                <option value="trujillo">Trujillo</option>
-                                <option value="vargas">La Guaira</option>
-                                <option value="yaracuy">Yaracuy</option>
-                                <option value="zulia">Zulia</option>
-                            </select>                            
-                            <input type="number" name="talentos" placeholder="¿Cuántos talentos necesitas?" min="1" required />
-                        </div>
-                        <button type="submit" class="btn-primary">Enviar</button>
-                    </form>
-                    
+                <form class="contact-form" action="https://formspree.io/f/mpwrkzkl" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="nombre" placeholder="Nombre completo" required />
+                        <input type="email" name="email" placeholder="Correo electrónico" required />
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="empresa" placeholder="Nombre de la empresa" required />
+                        <input type="tel" name="telefono" placeholder="Número de teléfono" required />
+                    </div>
+                    <div class="form-row">
+                        <select name="ubicacion" required>
+                            <option value="">Ubicación de la empresa</option>
+                            <option value="amazonas">Amazonas</option>
+                            <option value="anzoategui">Anzoátegui</option>
+                            <option value="apure">Apure</option>
+                            <option value="barinas">Barinas</option>
+                            <option value="bolivar">Bolívar</option>
+                            <option value="carabobo">Carabobo</option>
+                            <option value="dcc">Distrito Capital</option>
+                            <option value="cojedes">Cojedes</option>
+                            <option value="delta">Delta Amacuro</option>
+                            <option value="falcon">Falcón</option>
+                            <option value="guarico">Guárico</option>
+                            <option value="lara">Lara</option>
+                            <option value="merida">Mérida</option>
+                            <option value="miranda">Miranda</option>
+                            <option value="monagas">Monagas</option>
+                            <option value="nuevaesparta">Nueva Esparta</option>
+                            <option value="portuguesa">Portuguesa</option>
+                            <option value="sucre">Sucre</option>
+                            <option value="tachira">Táchira</option>
+                            <option value="trujillo">Trujillo</option>
+                            <option value="vargas">La Guaira</option>
+                            <option value="yaracuy">Yaracuy</option>
+                            <option value="zulia">Zulia</option>
+                        </select>
+                        <input type="number" name="talentos" placeholder="¿Cuántos talentos necesitas?" min="1"
+                            required />
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar</button>
+                </form>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer fade-in">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BlueTalent</h4>
+                    <ul>
+                        <li><a href="sobre-nosotros.html#quienes-somos">Quiénes somos</a></li>
+                        <li><a href="sobre-nosotros.html#vision">Misión y visión</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="#empresas-aliadas">Empresas aliadas</a></li>
+                        <li><a href="#ayuda-empresas">Ayuda para empresas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Soporte</h4>
+                    <ul>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BlueSystem. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
     <script>
         const form = document.querySelector('.contact-form');
-
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-
             const formData = new FormData(form);
             const action = form.getAttribute('action');
-
             try {
                 const response = await fetch(action, {
                     method: 'POST',
                     body: formData,
                     headers: { 'Accept': 'application/json' }
                 });
-
                 if (response.ok) {
                     alert('Gracias por contactarnos, te responderemos pronto.');
                     form.reset();
@@ -212,78 +230,32 @@
                 alert('Error enviando el formulario.');
             }
         });
-    </script>
 
-    <!-- Footer -->
-    <footer class="footer fade-in">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>BlueTalent</h4>
-                    <ul>
-                        <li><a href="#">Quiénes somos</a></li>
-                        <li><a href="#">Misión y visión</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#">Empresas aliadas</a></li>
-                        <li><a href="#">Ayuda para empresas</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Soporte</h4>
-                    <ul>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Iniciar sesión</a></li>
-                        <li><a href="#">Preguntas frecuentes</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 BlueSystem. Todos los derechos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
         const toggleBtn = document.getElementById('menu-toggle');
         const nav = document.querySelector('.nav');
         const actions = document.querySelector('.header-actions');
-
         toggleBtn.addEventListener('click', () => {
             toggleBtn.classList.toggle('active');
             nav.classList.toggle('show');
             actions.classList.toggle('show');
         });
-    </script>     
-    
-    <script>
-        // Detectar cuando un elemento entra en pantalla y agregar clase para animación
+
         document.addEventListener('DOMContentLoaded', () => {
             const faders = document.querySelectorAll('.fade-in');
-
-            const appearOptions = {
-                threshold: 0.1,
-                rootMargin: "0px 0px -50px 0px"
-            };
-
-            const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+            const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const appearOnScroll = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (!entry.isIntersecting) return;
                     entry.target.style.animationPlayState = 'running';
-                    appearOnScroll.unobserve(entry.target);
+                    observer.unobserve(entry.target);
                 });
             }, appearOptions);
-
             faders.forEach(fader => {
                 fader.style.animationPlayState = 'paused';
                 appearOnScroll.observe(fader);
             });
         });
-    </script>   
-
+    </script>
 </body>
 
 </html>
